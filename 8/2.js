@@ -30,14 +30,12 @@ export default function solve() {
     while (!loops) {
       // terminated!
       if (instructionCount >= data.length) {
-        console.log(`Program terminated with an accumulator value of ${accumulator}`)
+        console.log(accumulator)
         return;
       }
 
       // If instruction.executed == false, log and return 
-      console.log(data[instructionCount])
       if (data[instructionCount].executed) {
-        console.log(`Program loops with ${instructionToChange} changed at instruction ${instructionCount}`);
         loops = true;
         continue;
       }
